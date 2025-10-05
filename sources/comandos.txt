@@ -1,0 +1,101 @@
+get3thddnsattr # Obtém as configurações do serviço de DDNS de terceiros (ex: DynDNS, No-IP, etc.), incluindo status, servidor, usuário, senha e domínio.
+getalarmsnapattr # Recupera as configurações de como a câmera tira fotos (snapshots) quando um alarme é acionado, como o canal e a contagem de fotos.
+getaudioalarmattr # Consulta os atributos do alarme de áudio, como se está habilitado e o nível de sensibilidade do microfone que dispara o alarme.
+getcapability # Exibe as capacidades de hardware da câmera, indicando se possui suporte a CVBS, cartão SD e portas USB.
+getcloudattr # Obtém as configurações e o status da conexão da câmera com o serviço de nuvem ou plataforma P2P.
+getdevtype # Retorna o tipo ou modelo específico do dispositivo da câmera, o que é útil para identificação.
+gethttpport # Obtém porta HTTP para acesso web.
+getimageattr # Obtém configurações de imagem (brilho, contraste, etc.).
+getimagemaxsize # Informa a resolução máxima de imagem que a câmera é capaz de capturar (ex: 4MP, 1080P, etc.).
+getinterip # Obtém o endereço IP público da câmera (retorna interip).
+getioattr # Recupera os atributos e o status das entradas e saídas digitais (GPIO) da câmera, se disponíveis.
+getircutattr # Exibe as configurações do filtro IR-Cut, que controla a alternância entre modos dia (colorido) e noite (infravermelho).
+getlanguage # Obtém código do idioma da interface.
+getlightattr # Obtém os atributos relacionados à iluminação da câmera, como o status dos LEDs ou do infravermelho.
+getlampattrex # Retorna configurações estendidas da lâmpada ou iluminação auxiliar da câmera, como modo e tempo limite.
+getmdattr # Consulta os atributos de detecção de movimento, incluindo áreas de detecção, sensibilidade e limites configurados.
+getmobilesnapattr # Obtém as configurações específicas para snapshots (fotos) otimizados para visualização em dispositivos móveis.
+getmotorattr # Exibe os atributos de controle do motor PTZ (Pan/Tilt/Zoom), como direções, velocidades, varredura e presets configurados.
+getmotorrange # Informa os limites de movimento físico do motor PTZ da câmera, ou seja, o alcance máximo de pan (horizontal) e tilt (vertical).
+getnetattr # Obtém configurações de rede: IP, máscara, gateway, DHCP, DNS.
+getntpattr # Obtém os atributos do Network Time Protocol (NTP), que é usado para sincronizar a data e hora da câmera com um servidor de tempo.
+getonvifattr # Consulta os atributos relacionados ao protocolo ONVIF (Open Network Video Interface Forum), como porta de serviço, status de autenticação e canais.
+getossattr # Exibe informações sobre o sistema de armazenamento da câmera (On-line Storage System), incluindo espaço total, usado e livre, além do tempo de expiração.
+getourddnsattr # Obtém as configurações do serviço DDNS proprietário da câmera, geralmente usado para acesso remoto simplificado via um domínio específico do fabricante.
+getpirattr # Retorna os atributos do sensor PIR (Passive Infrared), que detecta movimento através de variações de calor, incluindo status de habilitação.
+getplatformtype # Informa o tipo de plataforma ou chipset em que o firmware da câmera está a ser executado.
+getplanrecattr # Consulta os atributos da gravação agendada, como se está habilitada, qual canal de gravação, duração e tipo de gravação.
+getptzcomattr # Obtém atributos da comunicação PTZ (Pan/Tilt/Zoom) via porta serial, como protocolo, endereço, velocidade e configurações de comunicação (baudrate, etc.).
+getptzspeed # Exibe as configurações de velocidade de movimento para as operações de Pan (horizontal) e Tilt (vertical) da câmera PTZ.
+getrelayattr # Recupera os atributos e o tempo de ativação de um relé conectado à câmera, geralmente usado para acionar dispositivos externos em caso de alarme.
+getrtmpattr # Obtém as configurações do protocolo RTMP (Real-Time Messaging Protocol), usado para streaming de vídeo e áudio pela internet.
+getrtspport # Consulta as portas configuradas para o protocolo RTSP (Real Time Streaming Protocol) e RTP, usadas para streaming de vídeo.
+getrtspauth # Obtém status da autenticação RTSP (0=off, 1=on).
+getserverinfo # Fornece uma visão geral detalhada das informações do servidor da câmera, incluindo modelo, versões de firmware (hardware, software, web), status de UPNP, DDNS e informações sobre o cartão SD.
+getservertime # Obtém a data e hora atual do sistema da câmera, além do fuso horário configurado e o status do horário de verão.
+getsetupflag # Exibe flags de configuração inicial do sistema, incluindo informações sobre usuários padrão e seus níveis de acesso.
+getsmdex # Recupera atributos estendidos da Detecção de Movimento Inteligente (SMD), que oferece funcionalidades mais avançadas de detecção.
+getsmartrackattr # Consulta os atributos relacionados à função de rastreamento inteligente da câmera, permitindo que ela siga objetos em movimento.
+getsmtpattr # Obtém as configurações do SMTP (Simple Mail Transfer Protocol) para o envio de e-mails de notificação, como servidor, porta, credenciais e destinatários.
+getsnaptimerattrex # Exibe os atributos estendidos do temporizador de snapshot, especificando os intervalos para o envio automático de fotos via e-mail, FTP ou serviços de nuvem.
+getupnpattr # Obtém os atributos do UPnP (Universal Plug and Play), que permite que dispositivos na rede se descubram e configurem automaticamente.
+getuserattr # Recupera os atributos dos utilizadores configurados na câmera, incluindo nomes de usuário, senhas (muitas vezes hashadas ou ocultas) e seus níveis de permissão.
+getvideoattr # Consulta os atributos da codificação de vídeo, como modo de vídeo, norma (PAL/NTSC), perfil, número máximo de canais de vídeo e configurações de WDR.
+getwirelessattr # Obtém os atributos da conexão wireless (Wi-Fi), incluindo status de habilitação, SSID da rede, tipo de autenticação, chave e modo de encriptação.
+getxqp2pattr # Exibe os atributos do serviço P2P (Peer-to-Peer) da câmera, geralmente contendo o UID único do dispositivo e informações do servidor de conexão.
+searchwireless # Realiza uma varredura para identificar e listar as redes wireless disponíveis ao redor da câmera, mostrando SSIDs, força do sinal (RSSI) e tipos de segurança.
+getalarmsoundattr # Consulta as configurações específicas para o tipo e duração do som emitido pela câmera em caso de alarme.
+getaudioflag # Exibe um flag ou status indicando a presença ou habilitação da funcionalidade de áudio na câmera.
+getftpattr # Obtém os atributos da configuração FTP (File Transfer Protocol), como servidor, porta, credenciais, diretório de destino e modo de transferência.
+getinfrared # Obtém o status do LED infravermelho da câmera. Retorna 'auto' (automático), 'open' (ligado) ou 'close' (desligado).
+getmdalarm&-aname=email&cmd=getmdalarm&-aname=emailsnap&cmd=getmdalarm&-aname=ftpsnap&cmd=getmdalarm&-aname=snap&cmd=getmdalarm&-aname=emailrec&cmd=getmdalarm&-aname=record&cmd=getmdalarm&-aname=ftprec&cmd=getmdalarm&-aname=relay # Comando relacionado ao alarme de detecção de movimento. É frequentemente um comando de configuração que requer parâmetros adicionais para ser válido.
+getoverlayattr # Recupera os atributos de sobreposição de informação na imagem de vídeo, como texto personalizado, data e hora. Frequentemente requer parâmetros.
+getscheduleex&-ename=md # Atributos estendidos de agendamento de tarefas. É um comando que geralmente precisa de parâmetros para especificar qual agendamento consultar ou modificar.
+getsmdattr # Obtém os atributos da detecção de movimento inteligente (SMD), incluindo configurações de áreas e limites para a detecção.
+getstreamnum # Indica o número de streams de vídeo que a câmera é capaz de gerar (ex: main stream, sub stream).
+getwifiattr # Atributos específicos do módulo Wi-Fi. Em algumas câmeras, este comando pode não ser implementado ou resultar em erro 404, mesmo que 'getwirelessattr' funcione.
+getaudioinvolume # Obtém configurações de entrada de áudio.
+getaudiooutvolume # Obtém volume de saída de áudio.
+chkwirelessattr # Inicia teste de conexão Wi-Fi. Parâmetros: wf_ssid, wf_auth, wf_key, wf_enc, wf_mode. Retorno imediato: '[Succeed]set ok.' indica início do teste.
+getchkwireless # Consulta resultado do teste. Retorna chkres: '0'=falha, '1'=sucesso. Requer espera após chkwirelessattr.
+getwifiattrex #  retorna parâmetros avançados de configuração do Wi-Fi.
+get4gattr  # Retorna todos os parâmetros e estado do módulo 4G da câmera.
+getoplatformattr  # Obter parâmetros da plataforma Hichip.
+getgb28181attr # Retorna a configuração e estado do protocolo GB28181 (padrão chinês de videovigilância IP)
+testsmtp # Executa um teste de envio de email usando as configurações SMTP que já estão gravadas na câmera.
+testftp # Testa a conexão FTP usando as configurações já salvas na câmera (servidor, porta, usuário, senha, diretório).
+getdevices # Adicionar outros dispositivos.
+getcover #  //view-source:http://192.168.0.147/web/videoshade.html
+gettmallattr # // http://192.168.0.147/web/tmall.html
+getamazonattr # //http://192.168.0.147/web/amazon.html
+getcloudenable # //http://192.168.0.147/web/cloud.html
+#getjplatformattr # //http://192.168.0.147/web/jplatform.html
+getp2pattr # //http://192.168.0.147/web/tplatform.html
+getdanaattr # // http://192.168.0.147/web/dplatform.html
+getobjattr # //http://192.168.0.147/web/objplatform.html
+getxqp2pattr #//http://192.168.0.147/web/xqplatform.html
+gethip2pattr # //http://192.168.0.147/web/hiplatform.html
+getldcattr # Get the distortion value of lens.
+requestifrm # Request the next frame as a key frame requer parametros, requestifrm&-chn=11/12
+preset # Set the attributes for preset , /cgi-bin/hi3510/param.cgi?cmd=preset&-act=goto&-number=1
+relayctrl # Manually open or close the alarm relay require parameteres #param.cgi?cmd=relayctrl&-act=on/off
+getfisheyeattr # Fisheye correction parameter
+gettimerreboot # Habilita o reboot, com dia e hora
+#  - `chkwirelessattr` é um comando de ação que inicia um teste, não deve ser executado em lote sem parâmetros.
+ - `getchkwireless` só retorna um resultado válido após um teste ter sido iniciado.
+getvencattr&-chn=12 # Video encoding paramter necessita parametros getvencattr &-chn=11/12
+getaencattr&-chn=12 # Audio encoding paramter &-chn=11/12
+getlampctrl  # Controle manual de LEDs
+gethttpsport  # Obtém o número da porta HTTPS configurada na câmera.
+getalarmserverattr # Obtém as configurações do servidor de alarme/receção central
+getsnaptimerattr # Temporizaçao para captura de imagens
+getgoolinkattr # Retrieves configuration for the Goolink P2P cloud service
+
+/*
+    ptzup.cgi
+    ptzdown.cgi
+    ptzleft.cgi
+    ptzright.cgi
+    ptzzoomin.cgi
+    ptzzoomout.cgi
+	*/
