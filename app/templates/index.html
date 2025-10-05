@@ -4,17 +4,44 @@
 
 {% block content %}
 
-    <h1>Gestor da Câmara Hi3510</h1>
-    <p>Página inicial com snapshot e logs do sistema.</p>
+    <header>
+        <h1>Gestor da Câmara Hi3510</h1>
+        <p>Página inicial com snapshot e logs do sistema.</p>
+    </header>
 
-    <div class="home-grid">
-        <div class="snapshot-container">
-            <h2>Snapshot da Câmara</h2>
-            <img src="{{ url_for('api.snapshot_feed') }}" alt="Snapshot da Câmara" class="snapshot-img">
+    <section class="home-grid" aria-labelledby="snapshot-heading">
+        <div class="snapshot-container panel" aria-live="polite">
+            <h2 id="snapshot-heading">Snapshot da Câmara</h2>
+
+            <!-- Data attribute holds the API endpoint; JS will append a cache-busting param -->
+            <div class="snapshot-toolbar" aria-hidden="false">
+                <button id="snapshot-refresh" type="button" class="button">Atualizar</button>
+                <label class="button button-secondary" for="snapshot-auto-toggle">
+                    <input id="snapshot-auto-toggle" type="checkbox" aria-label="Atualização automática" />
+                    Auto
+                </label>
+                <span id="snapshot-status" class="snapshot-status" role="status" aria-live="polite"></span>
+            </div>
+
+            <div class="snapshot-wrapper">
+                <img
+                    id="snapshot-img"
+                    class="snapshot-img"
+                    src="{{ url_for('api.snapshot_feed') }}?t=0"
+                    data-api="{{ url_for('api.snapshot_feed') }}"
+                    alt="Imagem em direto da câmara"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                >
+                <div id="snapshot-spinner" class="spinner" aria-hidden="true"></div>
+            </div>
         </div>
+    </section>
 
-    </div>
 {% endblock %}
 
 {% block scripts %}
+    <!-- Page specific script (deferred) -->
+    <script defer src="{{ url_for('static', filename='js/index.js') }}"></script>
 {% endblock %}
