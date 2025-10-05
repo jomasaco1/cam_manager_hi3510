@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Configurações de Rede{% endblock %}
+
+{% block content %}
+<h1>Configurações de Rede</h1>
+<div id="network-settings-container" class="tab-content">
+    <div class="loader">A carregar...</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="module" src="{{ url_for('static', filename='js/network_manager.js') }}"></script>
+{% endblock %}

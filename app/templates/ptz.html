@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block title %}Controlo PTZ{% endblock %}
+
+{% block content %}
+<h1>Controlo PTZ e Vídeo ao Vivo</h1>
+
+<div class="ptz-grid">
+    <div class="video-player-container">
+        <canvas id="video_cavas"></canvas>
+    </div>
+
+    <div class="controls-container">
+        <div class="panel">
+            <h2>Movimento</h2>
+            <div class="ptz-pad">
+                <button class="ptz-btn" data-action="upleft">↖</button>
+                <button class="ptz-btn" data-action="up">↑</button>
+                <button class="ptz-btn" data-action="upright">↗</button>
+                <button class="ptz-btn" data-action="left">←</button>
+                <button class="ptz-btn" data-action="home">●</button>
+                <button class="ptz-btn" data-action="right">→</button>
+                <button class="ptz-btn" data-action="downleft">↙</button>
+                <button class="ptz-btn" data-action="down">↓</button>
+                <button class="ptz-btn" data-action="downright">↘</button>
+            </div>
+            <div class="zoom-controls">
+                <button class="ptz-btn" data-action="zoomin">Zoom +</button>
+                <button class="ptz-btn" data-action="zoomout">Zoom -</button>
+				<button class="ptz-btn" data-action="focusout">Foco +</button>
+                <button class="ptz-btn" data-action="focusin">Foco -</button>
+            </div>
+            <div class="scan-controls">
+                <button id="hscan-btn">Scan H.</button>
+                <button id="vscan-btn">Scan V.</button>
+                <button id="stopscan-btn">Parar</button>
+            </div>
+            <div class="form-group" style="margin-top: 15px;">
+                <label for="ptz-speed">Velocidade: <span id="speed-value">45</span></label>
+                <input type="range" id="ptz-speed" class="speed-slider" min="1" max="63" value="45">
+            </div>
+        </div>
+        <div class="panel">
+            <h2>Presets</h2>
+            <div class="preset-controls">
+                <input type="number" id="preset-number" value="1" min="1" max="16">
+                <div>
+                    <button id="goto-preset">Ir</button>
+                    <button id="set-preset">Definir</button>
+                    <button id="delete-preset" class="delete">Eliminar</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h2>Rastreamento Inteligente</h2>
+            <form id="tracking-form">
+                <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="smartrack_enable" name="smartrack_enable" style="width: auto;">
+                    <label for="smartrack_enable">Ativar Rastreamento</label>
+                </div>
+                <div class="form-group">
+                    <label for="smartrack_timeout">Tempo de Rastreamento (s):</label>
+                    <input type="number" id="smartrack_timeout" name="smartrack_timeout" min="1" value="60">
+                </div>
+                <div class="form-group">
+                    <label for="alarmpresetindex">Preset de Alarme (Ir):</label>
+                    <input type="number" id="alarmpresetindex" name="alarmpresetindex" min="1" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="watchpresetindex">Preset de Vigia (Voltar):</label>
+                    <input type="number" id="watchpresetindex" name="watchpresetindex" min="0" value="0">
+                    <small>(0 para nenhum)</small>
+                </div>
+                <button type="submit" style="width: 100%;">Salvar Rastreamento</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        {{ initial_params_script|safe }}
+    </script>
+    <script src="{{ url_for('static', filename='js/commonff.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pcm-player.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/video-player.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/webgl-player.js') }}"></script>
+    <script type="text/javascript">
+        var player = null;
+        function initializePlayer() { 
+            try {
+                var canvas = document.getElementById("video_cavas");
+                var w = parseInt(width_2); 
+                var h = parseInt(height_2);
+                canvas.width = w; 
+                canvas.height = h;
+
+                player = new HxPlayer();
+                player.init({ canvas: canvas, width: w, height: h });
+                player.playvideo("{{ cam.ip }}", "{{ cam.port }}", "{{ cam.stream_type }}", name0, password0);
+            } catch (e) {
+                console.error("Erro ao inicializar o HxPlayer:", e);
+            }
+        }
+        window.addEventListener('load', initializePlayer);
+    </script>
+    <script src="{{ url_for('static', filename='js/ptz_manager.js') }}"></script>
+{% endblock %}

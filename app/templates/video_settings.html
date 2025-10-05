@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Configurações de Vídeo{% endblock %}
+
+{% block content %}
+<h1>Configurações de Vídeo</h1>
+<div id="video-settings-container" class="tab-content">
+    <div class="loader">A carregar...</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        {{ initial_params_script|safe }}
+        var cam_config = {
+            ip: "{{ cam.ip }}", port: "{{ cam.port }}", stream_type: "{{ cam.stream_type }}",
+            user: name0, pass: password0
+        };
+    </script>
+    
+    <script src="{{ url_for('static', filename='js/commonff.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pcm-player.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/video-player.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/webgl-player.js') }}"></script>
+
+    <script type="module" src="{{ url_for('static', filename='js/video_manager.js') }}"></script>
+{% endblock %}

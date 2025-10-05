@@ -1,1 +1,136 @@
+{% extends "layout.html" %}
+{% block title %}Configuração de Alarmes{% endblock %}
 
+{% block content %}
+<h1>Configuração de Alarmes</h1>
+<div id="notification" class="notification"></div>
+
+<div class="settings-container">
+    <div class="form-column">
+        <form id="alarm-settings-form">
+            <div class="panel">
+                <h3>Deteção de Movimento</h3>
+                <div id="motion-areas-container">
+                    <div class="loader">A carregar controlos...</div>
+                </div>
+            </div>
+<div class="panel">
+    <h3>Deteção e Rastreamento Inteligente</h3>
+    
+    <div class="form-group">
+        <label for="smd_enable">Deteção de Humanoide (SMD)</label>
+        <select id="smd_enable" name="smd_enable">
+            <option value="1">Ligado</option>
+            <option value="0">Desligado</option>
+        </select>
+        <small>Ativa a análise de imagem para detetar formas humanas.</small>
+    </div>
+    <div id="smd_options_container"> <div class="form-group range-group">
+            <label for="smd_gthresh">Sensibilidade</label>
+            <input type="range" id="smd_gthresh" name="smd_gthresh" min="1" max="100">
+            <span id="smd_gthresh_output">50</span>
+        </div>
+        <div class="form-group">
+            <label for="smd_threshold">Limiar de Deteção</label>
+            <input type="number" id="smd_threshold" name="smd_threshold">
+            <small>Valor técnico de limiar (maior valor = menos deteções).</small>
+        </div>
+        <div class="form-group">
+            <label for="smd_rect">Exibir Retângulo de Deteção na Imagem</label>
+            <select id="smd_rect" name="smd_rect">
+                <option value="1">Sim</option>
+                <option value="0">Não</option>
+            </select>
+        </div>
+        <fieldset>
+            <legend>Área de Deteção Inteligente (apenas leitura)</legend>
+            <div class="form-group-row compact">
+                <label>X:</label><input type="number" id="smd_x" name="smd_x">
+                <label>Y:</label><input type="number" id="smd_y" name="smd_y">
+                <label>W:</label><input type="number" id="smd_w" name="smd_w">
+                <label>H:</label><input type="number" id="smd_h" name="smd_h">
+            </div>
+        </fieldset>
+    </div>
+
+    <hr style="margin: 1.5rem 0;">
+
+    <div class="form-group">
+        <label for="smartrack_enable">Rastreamento Automático (Smart Tracking)</label>
+        <select id="smartrack_enable" name="smartrack_enable">
+            <option value="1">Ligado</option>
+            <option value="0">Desligado</option>
+        </select>
+        <small>A câmara seguirá o movimento detetado (requer PTZ).</small>
+    </div>
+    <div class="form-group">
+        <label for="smartrack_timeout">Tempo Limite de Rastreamento (segundos)</label>
+        <input type="number" id="smartrack_timeout" name="smartrack_timeout" min="5" max="300">
+    </div>
+</div>
+            <div class="panel">
+                <h3>Ações de Alarme</h3>
+                <div id="alarm-actions-container" class="grid-container" style="grid-template-columns: 1fr 1fr;">
+                    <div class="loader">A carregar ações...</div>
+                </div>
+            </div>
+            
+            <div class="panel">
+    <h3>Agendamento Semanal</h3>
+    <div id="schedule-grid-container">
+        <div class="loader">A carregar calendário...</div>
+    </div>
+    <div class="schedule-actions" style="margin-top: 10px; display: flex; gap: 10px;">
+        <button type="button" id="schedule-select-all" class="button-secondary">Selecionar Tudo</button>
+        <button type="button" id="schedule-clear-all" class="button-secondary">Limpar Tudo</button>
+    </div>
+    <small>Clique e arraste para ativar/desativar os horários de deteção.</small>
+</div>
+
+            <div class="panel">
+                <h3>Outras Fontes de Alarme</h3>
+                <div class="form-group">
+                    <label for="io_enable">Alarme de Entrada (IO)</label>
+                    <select id="io_enable" name="io_enable"><option value="0">Desligado</option><option value="1">Ligado</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="io_flag">Modo de Alarme IO</label>
+                    <select id="io_flag" name="io_flag"><option value="0">Normalmente Fechado</option><option value="1">Normalmente Aberto</option></select>
+                </div>
+                 <div class="form-group">
+                    <label for="pir_enable">Sensor PIR</label>
+                    <select id="pir_enable" name="pir_enable"><option value="0">Desligado</option><option value="1">Ligado</option></select>
+                </div>
+                 <div class="form-group">
+                    <label for="aa_enable">Deteção de Som</label>
+                    <select id="aa_enable" name="aa_enable"><option value="0">Desligada</option><option value="1">Ligada</option></select>
+                </div>
+                <div class="form-group range-group">
+                    <label for="aa_value">Sensibilidade (Som)</label>
+                    <input type="range" id="aa_value" name="aa_value" min="0" max="100" value="75">
+                    <span id="aa_value_output">75</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="snapshot-column">
+    <h3>Editor Visual de Áreas</h3>
+    <div id="snapshot-container"
+         class="snapshot-container"
+         data-main-width="{{ main_stream_width }}"
+         data-main-height="{{ main_stream_height }}">
+    <img id="snapshot-img" src="/api/snapshot" alt="Pré-visualização da Câmara" draggable="false">
+    </div>
+</div>
+</div>
+
+<div style="text-align: center; margin-top: 2rem;">
+    <button id="save-button">Salvar Todas as Configurações</button>
+    <button id="reload-button" class="button-secondary">Recarregar da Câmara</button>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/alarmes.js') }}"></script>
+{% endblock %}

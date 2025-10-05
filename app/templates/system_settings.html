@@ -1,0 +1,195 @@
+{% extends "layout.html" %}
+
+{% block title %}Configurações do Sistema{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-9">
+            <h2><i class="fas fa-cogs"></i> Configurações do Sistema</h2>
+            <hr>
+
+            <div class="card mb-4">
+    <div class="card-header">Informações do Dispositivo</div>
+    <div class="card-body" id="system-info-container">
+        <p>A carregar informações...</p>
+    </div>
+</div>
+
+            <div class="card mb-4">
+                <div class="card-header">Ações e Manutenção</div>
+                <div class="card-body">
+                    <p>Execute tarefas de manutenção no dispositivo.</p>
+                    <button id="reboot-btn" class="btn btn-warning m-1"><i class="fas fa-power-off"></i> Reiniciar</button>
+                    <button id="reset-btn" class="btn btn-danger m-1"><i class="fas fa-undo"></i> Repor Padrões</button>
+                    <button id="backup-btn" class="btn btn-info m-1"><i class="fas fa-download"></i> Backup Configurações</button>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">Firmware e Restauro</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="restore-file" class="form-label">Restaurar Configurações</label>
+                        <div class="input-group">
+                            <input class="form-control" type="file" id="restore-file" accept=".bin">
+                            <button class="btn btn-outline-secondary" type="button" id="restore-btn">Restaurar</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="upgrade-file" class="form-label">Atualizar Firmware</label>
+                        <div class="input-group">
+                            <input class="form-control" type="file" id="upgrade-file" accept=".bin,.zip,.img">
+                            <button class="btn btn-outline-primary" type="button" id="upgrade-btn">Atualizar</button>
+                        </div>
+                        <small class="form-text text-muted">Atenção: A atualização do firmware é um processo de risco.</small>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="card mb-4">
+    <div class="card-header">Idioma</div>
+    <div class="card-body">
+        <p>Selecione o idioma para a interface web original da câmara.</p>
+        <div class="form-group row">
+            <label for="language-select" class="col-sm-3 col-form-label">Idioma:</label>
+            <div class="col-sm-9">
+                <select id="language-select" class="form-select">
+                    <option value="0">Chinês</option>
+                    <option value="1">Inglês</option>
+                    <option value="2">Francês</option>
+                    <option value="3">Alemão</option>
+                    <option value="4">Italiano</option>
+                    <option value="5">Espanhol</option>
+                    <option value="6">Russo</option>
+                    <option value="8">Coreano</option>
+                    <option value="9">Polaco</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-end">
+        <button id="save-language-btn" class="btn btn-primary"><i class="fas fa-save"></i> Salvar Idioma</button>
+    </div>
+</div>
+
+            <div class="card mb-4">
+    <div class="card-header">Data e Hora</div>
+    <div class="card-body">
+        <form id="time-form">
+            <div class="form-group row mb-3">
+                <label for="current-time" class="col-sm-4 col-form-label">Hora Atual da Câmara</label>
+                <div class="col-sm-8">
+                    <input type="text" readonly class="form-control-plaintext" id="current-time" value="A carregar...">
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="timeZone" class="col-sm-4 col-form-label">Fuso Horário</label>
+                <div class="col-sm-8">
+                    <select class="form-select" id="timeZone">
+                        <option value="Etc/GMT-12">(GMT-12:00) International Date Line West</option>
+                        <option value="Pacific/Honolulu">(GMT-10:00) Hawaii</option>
+                        <option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US & Canada)</option>
+                        <option value="America/Denver">(GMT-07:00) Mountain Time (US & Canada)</option>
+                        <option value="America/Chicago">(GMT-06:00) Central Time (US & Canada)</option>
+                        <option value="America/New_York">(GMT-05:00) Eastern Time (US & Canada)</option>
+                        <option value="America/Sao_Paulo">(GMT-03:00) Brasilia</option>
+                        <option value="Atlantic/Azores">(GMT-01:00) Azores</option>
+                        <option value="Europe/Dublin">(GMT) Dublin, Edinburgh, Lisbon, London</option>
+                        <option value="Europe/Brussels">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                        <option value="Europe/Athens">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+                        <option value="Asia/Hong_Kong">(GMT+08:00) Beijing, Hong Kong</option>
+                    </select>
+                </div>
+            </div>
+			<div class="form-group row mb-3">
+    <label for="dstmode" class="col-sm-4 col-form-label">Horário de Verão</label>
+    <div class="col-sm-8">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="dstmode">
+            <label class="form-check-label" for="dstmode">
+                Ajustar automaticamente para horário de verão
+            </label>
+        </div>
+        <small class="form-text text-muted">
+            Nota: Nem todos os fusos horários suportam ajuste automático de DST.
+        </small>
+    </div>
+</div>
+            <hr>
+            <h5>Sincronização Automática (NTP)</h5>
+            <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" id="ntpenable">
+                <label class="form-check-label" for="ntpenable">Ativar Sincronização Automática</label>
+            </div>
+            
+            <div id="ntp-settings" style="display: none;">
+                <div class="form-group row mb-3">
+                    <label for="ntpserver" class="col-sm-4 col-form-label">Servidor NTP</label>
+                    <div class="col-sm-8">
+                        <select class="form-select" id="ntpserver">
+                            <option value="time.windows.com">time.windows.com</option>
+                            <option value="time.nist.gov">time.nist.gov</option>
+                            <option value="time.nuri.net">time.nuri.net</option>
+                            <option value="time.kriss.re.kr">time.kriss.re.kr</option>
+                            <option value="other">Outro...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-3" id="ntpserver-other-container" style="display: none;">
+                    <label for="ntpserver-other" class="col-sm-4 col-form-label">Servidor Personalizado</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="ntpserver-other" placeholder="Ex: pool.ntp.org">
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="ntpinterval" class="col-sm-4 col-form-label">Atualizar a cada</label>
+                    <div class="col-sm-8">
+                        <select class="form-select" id="ntpinterval">
+                            <option value="1">1 Hora</option>
+                            <option value="2">2 Horas</option>
+                            <option value="6">6 Horas</option>
+                            <option value="12">12 Horas</option>
+                            <option value="24">24 Horas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer text-end">
+        <button id="sync-pc-btn" class="btn btn-secondary me-2"><i class="fas fa-desktop"></i> Sincronizar com PC</button>
+        <button id="save-time-btn" class="btn btn-primary"><i class="fas fa-save"></i> Salvar Configurações</button>
+    </div>
+</div>
+
+            <div class="card">
+                <div class="card-header">Logs do Sistema</div>
+                <div class="card-body">
+                    <ul class="nav nav-tabs" id="logTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="system-log-tab" data-bs-toggle="tab" data-bs-target="#system-log-panel" type="button">Sistema</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="process-log-tab" data-bs-toggle="tab" data-bs-target="#process-log-panel" type="button">Processos</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="logTabsContent">
+                        <div class="tab-pane fade show active" id="system-log-panel" role="tabpanel">
+                            <textarea id="system-log-display" class="form-control mt-2" rows="10" readonly></textarea>
+                            <button id="refresh-syslog" class="btn btn-secondary btn-sm mt-2">Atualizar</button>
+                            <button id="clean-syslog" class="btn btn-danger btn-sm mt-2">Limpar Log</button>
+                        </div>
+                        <div class="tab-pane fade" id="process-log-panel" role="tabpanel">
+                            <textarea id="process-log-display" class="form-control mt-2" rows="10" readonly></textarea>
+                            <button id="refresh-proclog" class="btn btn-secondary btn-sm mt-2">Atualizar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/system_settings.js') }}"></script>
+{% endblock %}

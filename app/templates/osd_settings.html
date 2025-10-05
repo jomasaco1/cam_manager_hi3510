@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}OSD e Máscaras de Privacidade{% endblock %}
+{% block content %}
+<h1>OSD e Máscaras de Privacidade</h1>
+<p>Configure o texto sobreposto e as áreas de privacidade. As alterações são pré-visualizadas em tempo real.</p>
+<div id="osd-settings-container" class="tab-content">
+    <div class="loader">A carregar...</div>
+</div>
+{% endblock %}
+{% block scripts %}
+    <script type="module" src="{{ url_for('static', filename='js/osd_manager.js') }}"></script>
+{% endblock %}

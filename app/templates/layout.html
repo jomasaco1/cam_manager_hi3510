@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+	<base href="/">
+    <title>{% block title %}Câmara Hi3510{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{{ url_for('main.index') }}">Home</a>
+		<a href="{{ url_for('ptz.ptz_page') }}">Controlo PTZ</a>
+		<a href="{{ url_for('main.settings_image') }}">Imagem</a>
+		<a href="{{ url_for('main.settings_video') }}">Vídeo</a>
+        <a href="{{ url_for('main.settings_network') }}">Rede</a>
+		<a href="{{ url_for('main.settings_audio') }}">Áudio</a>
+		<a href="{{ url_for('main.settings_osd') }}">Osd</a>
+		<a href="{{ url_for('alarm.alarmes_page') }}">Alarmes</a>
+		<a href="{{ url_for('main.settings_system') }}">Sistema</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
