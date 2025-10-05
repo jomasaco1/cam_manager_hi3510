@@ -2,12 +2,14 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<base href="/">
     <title>{% block title %}Câmara Hi3510{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head %}{% endblock %}
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <a href="{{ url_for('main.index') }}">Home</a>
 		<a href="{{ url_for('ptz.ptz_page') }}">Controlo PTZ</a>
 		<a href="{{ url_for('main.settings_image') }}">Imagem</a>
@@ -18,9 +20,9 @@
 		<a href="{{ url_for('alarm.alarmes_page') }}">Alarmes</a>
 		<a href="{{ url_for('main.settings_system') }}">Sistema</a>
     </nav>
-    <div class="container">
+    <main class="container" role="main">
         {% block content %}{% endblock %}
-    </div>
+    </main>
 
     {% block scripts %}{% endblock %}
 </body>
