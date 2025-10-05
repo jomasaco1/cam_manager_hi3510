@@ -1,0 +1,44 @@
+{
+    "descricao": "Áudio, volume e alarmes sonoros",
+    "subAbas": {
+		"codecs": {
+            "comandos": ["getaencattr&-chn=11", "getaencattr&-chn=12"],
+            "parametros": {
+                "aeswitch_1": "Audio encoding canal 1 -  0 inactive, 1 active",
+                "aeformat_1": "Audio encoding format canal 1 - g711a rate 64Kbps, g726 16Kbps",
+				"aeswitch_2": "Audio encoding canal 2 -  0 inactive, 1 active",
+                "aeformat_2": "Audio encoding format canal 2 - g711a rate 64Kbps, g726 16Kbps"
+            }
+        },
+        "entrada_audio": {
+            "comandos": ["getaudioinvolume"],
+            "parametros": {
+                "volin_type": "Fonte de áudio (0=Line-in, 1=Microfone)",
+                "volume": "Volume de entrada (1-100)",
+                "aec": "Cancelamento de eco (0=desligado, 1=ligado)",
+                "denoise": "Redução de ruído (0=desligado, 1=ligado)"
+            }
+        },
+        "saida_audio": {
+            "comandos": ["getaudiooutvolume"],
+            "parametros": {
+                "ao_volume": "Volume de saída (1-100)"
+            }
+        },
+        "alarme_audio": {
+            "comandos": ["getaudioalarmattr", "getalarmsoundattr"],
+            "parametros": {
+                "aa_enable": "Alarme de áudio ativado (0/1)",
+                "aa_value": "Sensibilidade do microfone (0-100)",
+                "sound_type": "Tipo de som (0=campainha, 1=cão, 2=personalizado)",
+                "sound_time": "Duração do som (segundos)"
+            }
+        },
+        "geral_audio": {
+            "comandos": ["getaudioflag"],
+            "parametros": {
+                "audioflag": "Áudio ativado (0/1)"
+            }
+        }
+    }
+}

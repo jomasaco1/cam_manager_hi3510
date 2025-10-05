@@ -1,0 +1,66 @@
+{
+    "descricao": "PTZ, motor, presets e rastreamento",
+    "subAbas": {
+        "motor": {
+            "comandos": ["getmotorattr", "getmotorrange"],
+            "parametros": {
+                "pandir": "Direção horizontal (0=normal, 1=invertida)",
+                "tiltdir": "Direção vertical (0=normal, 1=invertida)",
+                "panspeed": "Velocidade horizontal (0=rápido, 1=médio, 2=lento)",
+                "tiltspeed": "Velocidade vertical (0=rápido, 1=médio, 2=lento)",
+                "panscan": "Varredura horizontal (0=desligado, 1=ligado)",
+                "tiltscan": "Ciclos de varredura vertical",
+                "movehome": "Mover para home ao reiniciar (on/off)",
+                "movesteptimeout": "Tempo máximo para movimentos (ms)",
+                "presettimeout": "Tempo máximo para preset (s)",
+                "ptzalarmmask": "Bloquear PTZ durante alarmes (on/off)",
+                "alarmpresetindex": "Índice do preset para alarmes",
+                "poweronpresetindex": "Índice do preset ao ligar",
+                "watchpresetindex": "Índice do preset para vigilância",
+                "poweronscanenable": "Varredura automática ao ligar (0/1)",
+                "limitleft": "Limite esquerdo",
+                "limitright": "Limite direito",
+                "tourinterval": "Intervalos de tour (s)",
+                "panrange": "Alcance horizontal (graus)",
+                "tiltrange": "Alcance vertical (graus)",
+                "panhome": "Posição horizontal home",
+                "tilthome": "Posição vertical home",
+                "pangap": "Folga mecânica horizontal",
+                "tiltgap": "Folga mecânica vertical",
+                "peripheral": "Visão periférica (0/1)",
+                "selfcheckspeed": "Velocidade do autoteste",
+                "lenstype": "Tipo de lente",
+                "trackpreset": "Índice do preset para rastreamento",
+                "trackhtimems": "Tempo de resposta horizontal (ms)",
+                "trackvtimems": "Tempo de resposta vertical (ms)"
+            }
+        },
+        "comunicacao": {
+            "comandos": ["getptzcomattr"],
+            "parametros": {
+                "protocal": "Protocolo (0=PELCO-D, 1=PELCO-P)",
+                "address": "Endereço do dispositivo (1-255)",
+                "speed": "Velocidade de movimento (0-60)",
+                "baud": "Baud rate (1200, 2400, etc.)",
+                "databit": "Bits de dados (7 ou 8)",
+                "stopbit": "Bits de parada (1 ou 2)",
+                "check": "Paridade (0=None, 1=Odd, 2=Even)"
+            }
+        },
+        "velocidade": {
+            "comandos": ["getptzspeed"],
+            "parametros": {
+                "panspeed": "Velocidade horizontal (0=rápido, 1=médio, 2=lento)",
+                "tiltspeed": "Velocidade vertical (0=rápido, 1=médio, 2=lento)"
+            }
+        },
+        "rastreamento": {
+            "comandos": ["getsmartrackattr"],
+            "parametros": {
+                "smartrack_flag": "Suporte a rastreamento (0/1)",
+                "smartrack_enable": "Rastreamento ativado (0/1)",
+                "smartrack_timeout": "Tempo máximo de rastreamento (s)"
+            }
+        }
+    }
+}

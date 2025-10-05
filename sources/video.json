@@ -1,0 +1,46 @@
+{
+    "descricao": "Vídeo, codificação e streams",
+    "subAbas": {
+        "codificacao": {
+            "comandos": ["getvideoattr"],
+            "parametros": {
+                "videomode": "Modo de vídeo",
+                "vinorm": "Norma de vídeo (P=PAL, N=NTSC)",
+                "profile": "Perfil do codec (1=Baseline, 3=Main, 4=High, 5=H.265)",
+                "maxchn": "Número máximo de canais",
+                "wdrmode": "Modo WDR (0/1)"
+            }
+        },
+        "streams": {
+            "comandos": ["getstreamnum"],
+            "parametros": {
+                "stream_num": "Número de streams de vídeo"
+            }
+        },
+        "snapshot_movel": {
+            "comandos": ["getmobilesnapattr"],
+            "parametros": {
+                "msize": "Tamanho de snapshot para móvel (0=QVGA, 1=VGA, 2=720P)"
+            }
+        },
+		"encoder_canais": {
+            "comandos": ["getvencattr&-chn=11", "getvencattr&-chn=12"],
+            "parametros": {
+                "bps_1": "Taxa de bits em kbps (32-8192 para fluxo primário)",
+                "fps_1": "Frames por segundo (1-30)",
+                "gop_1": "Intervalo de quadros-chave/GOP (2-150 frames)",
+                "brmode_1": "Modo de controle de taxa (0=CBR, 1=VBR)",
+                "imagegrade_1": "Qualidade de imagem (1-6, 1=melhor qualidade)",
+				"width_1": "Largura do vídeo em pixels (fluxo primário)",
+				"height_1": "Altura do vídeo em pixels (fluxo primário)",
+				"bps_2": "Taxa de bits em kbps (32-2048 para fluxo secundário)",
+                "fps_2": "Frames por segundo (1-30)",
+                "gop_2": "Intervalo de quadros-chave/GOP (2-150 frames)",
+                "brmode_2": "Modo de controle de taxa (0=CBR, 1=VBR)",
+                "imagegrade_2": "Qualidade de imagem (1-6, 1=melhor qualidade)",
+				"width_2": "Largura do vídeo em pixels (fluxo secundário)",
+				"height_2": "Altura do vídeo em pixels (fluxo secundário)"
+            }
+        }
+    }
+}

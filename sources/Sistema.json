@@ -1,0 +1,72 @@
+{
+    "descricao": "Sistema, utilizadores, hora e informações do dispositivo",
+    "subAbas": {
+        "informacoes": {
+            "comandos": ["getdevtype", "getplatformtype", "getserverinfo", "getcapability"],
+            "parametros": {
+                "devtype": "Modelo do dispositivo",
+                "pftype": "Código da plataforma (0-Hichip, 1-Langtang, 3-TUTK, 5-Dana, 6-Oujet, 8-Haixin)",
+                "model": "Modelo interno",
+                "hardVersion": "Versão do hardware",
+                "softVersion": "Versão do firmware",
+                "webVersion": "Versão da interface web",
+                "rs485Version": "Versão do protocolo RS485",
+                "name": "Nome do dispositivo",
+                "startdate": "Data de inicialização",
+                "upnpstatus": "Status UPnP",
+                "facddnsstatus": "Status DDNS do fabricante",
+                "th3ddnsstatus": "Status DDNS de terceiros",
+                "platformstatus": "Status da plataforma P2P",
+                "sdshow": "Mostrar status do SD (0/1)",
+                "sdstatus": "Status do SD (Ready/No Card/Full/Error)",
+                "sdfreespace": "Espaço livre no SD (KB)",
+                "sdtotalspace": "Espaço total do SD (KB)",
+                "cap_cvbs": "Suporte a CVBS (on/off)",
+                "cap_sd": "Suporte a cartão SD (on/off)",
+                "cap_usb": "Suporte a USB (on/off)"
+            }
+        },
+        "utilizadores": {
+            "comandos": ["getuserattr", "getsetupflag"],
+            "parametros": {
+                "at_username0": "Utilizador administrador",
+                "at_password0": "Senha administrador",
+                "at_authlevel0": "Nível de acesso administrador",
+                "at_username1": "Utilizador padrão",
+                "at_password1": "Senha padrão",
+                "at_authlevel1": "Nível de acesso padrão",
+                "at_username2": "Utilizador convidado",
+                "at_password2": "Senha convidado",
+                "at_authlevel2": "Nível de acesso convidado",
+                "name0": "Nome de utilizador administrador",
+                "password0": "Senha administrador",
+                "authLevel0": "Nível de autorização administrador"
+            }
+        },
+        "hora": {
+            "comandos": ["getservertime", "getntpattr"],
+            "parametros": {
+                "time": "Data and hora atual",
+                "timeZone": "Fuso horário",
+                "dstmode": "Horário de verão (on/off)",
+                "ntpenable": "NTP ativado (0/1)",
+                "ntpserver": "Servidor NTP",
+                "ntpinterval": "Intervalo de sincronização (horas)"
+            }
+        },
+        "reinicio": {
+            "comandos": ["gettimerreboot"],
+            "parametros": {
+                "sr_enable": "Reinício programado ativado (0/1)",
+                "sr_day": "Dia da semana (0-6, 7=todos)",
+                "sr_hour": "Hora do reinício (0-23)"
+            }
+        },
+        "idioma": {
+            "comandos": ["getlanguage"],
+            "parametros": {
+                "lancode": "Código de idioma (0=Chinês, 1=Inglês, etc.)"
+            }
+        }
+    }
+}

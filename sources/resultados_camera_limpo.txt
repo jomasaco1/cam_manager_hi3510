@@ -1,0 +1,622 @@
+COMANDO: getcloudattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var cloud_flag="1";
+var cloud_enable="0";
+--------------------------------------------------
+COMANDO: getrelayattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var time="5";
+--------------------------------------------------
+COMANDO: getmdalarm
+STATUS: FALHA
+MENSAGEM: Comando inválido (resposta 200)
+RESPOSTA:
+[Error]Param error.
+--------------------------------------------------
+COMANDO: getxqp2pattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var xqp2p_enable="1";
+var xqp2p_mode="1";
+var xqp2p_prefix="FGHIJKMNPSXYZ";
+var xqp2p_uid="SSAH-123384-DCEDD";
+var xqp2p_pushaddr="47.243.30.224";
+var xqp2p_svraddr="LPLXARSUHZLKPHLTHUPEEJEPEESTLUSWIHPGIDAOLOLQHYSQEILRIBPAPDLNHWERIAENLKIEEOHUHXEGEEEHEKEL-$$";
+--------------------------------------------------
+COMANDO: get3thddnsattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var d3th_enable="0";
+var d3th_service="0";
+var d3th_uname="myuserid";
+var d3th_passwd="mypassword";
+var d3th_domain="mydomain.dyndns.org";
+--------------------------------------------------
+COMANDO: getalarmsoundattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var sound_type="0";
+var sound_time="10";
+--------------------------------------------------
+COMANDO: getuserattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var at_username0="admin";
+var at_password0="admin";
+var at_authlevel0="15";
+var at_username1="user";
+var at_password1="user";
+var at_authlevel1="3";
+var at_username2="guest";
+var at_password2="guest";
+var at_authlevel2="1";
+--------------------------------------------------
+COMANDO: getrtspport
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var rtspport="554";
+var rtpport="6600";
+--------------------------------------------------
+COMANDO: getrtspauth
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var rtsp_aenable="0";
+--------------------------------------------------
+COMANDO: getmotorattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var pandir="0";
+var tiltdir="0";
+var panspeed="0";
+var tiltspeed="0";
+var panscan="1";
+var tiltscan="1";
+var movehome="on";
+var movesteptimeout="1000";
+var presettimeout="30";
+var ptzalarmmask="on";
+var alarmpresetindex="1";
+var poweronpresetindex="0";
+var watchpresetindex="0";
+var poweronscanenable="0";
+var limitleft="-1";
+var limitright="-1";
+var tourinterval="5;10;15;20;30;60;90;120";
+--------------------------------------------------
+COMANDO: getpirattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var pir_enable="0";
+var pir_flag="1";
+--------------------------------------------------
+COMANDO: getvencattr
+STATUS: FALHA
+MENSAGEM: Comando inválido (resposta 200)
+RESPOSTA:
+[Error]Param error.
+--------------------------------------------------
+COMANDO: getlampattrex
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var lamp_mode_flag="2";
+var lamp_mode="2";
+var lamp_timeout="30";
+var lamp_chktime="1080";
+--------------------------------------------------
+COMANDO: getaudioalarmattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var aa_enable="1";
+var aa_value="50";
+--------------------------------------------------
+COMANDO: getrtmpattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var rtmpport="1935";
+--------------------------------------------------
+COMANDO: getioattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var io_enable="0";
+var io_flag="1";
+--------------------------------------------------
+COMANDO: getlanattr
+STATUS: HTTP_ERRO
+MENSAGEM: Status HTTP 404
+RESPOSTA:
+Error 404: Not Found
+invalid request
+--------------------------------------------------
+COMANDO: getmotorrange
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var panrange="574";
+var tiltrange="114";
+var panhome="287";
+var tilthome="23";
+var pangap="24";
+var tiltgap="32";
+var peripheral="0";
+var selfcheckspeed="45";
+var lenstype="3";
+var trackpreset="31";
+var trackhtimems="700";
+var trackvtimems="300";
+--------------------------------------------------
+COMANDO: getoverlayattr
+STATUS: FALHA
+MENSAGEM: Comando inválido (resposta 200)
+RESPOSTA:
+[Error]Param error.
+--------------------------------------------------
+COMANDO: getossattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var oss_exptime="1970-01-01 02:00:00";
+var oss_totalsize="0";
+var oss_usedsize="0";
+var oss_freesize="0";
+--------------------------------------------------
+COMANDO: gethttpport
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var httpport="80";
+--------------------------------------------------
+COMANDO: getircutattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var saradc_switch_value="500";
+var saradc_b2c_switch_value="300";
+--------------------------------------------------
+COMANDO: getsetupflag
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var name0="admin";
+var password0="admin";
+var authLevel0="15";
+--------------------------------------------------
+COMANDO: getimageattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var display_mode="1";
+var brightness="50";
+var saturation="106";
+var sharpness="65";
+var contrast="50";
+var hue="50";
+var wdr="on";
+var wdrvalue="15";
+var night="off";
+var shutter="2000";
+var flash_shutter="14";
+var flip="on";
+var mirror="on";
+var gc="90";
+var ae="2";
+var targety="70";
+var noise="0";
+var gamma="1";
+var aemode="0";
+var imgmode="0";
+--------------------------------------------------
+COMANDO: getwirelesssta
+STATUS: HTTP_ERRO
+MENSAGEM: Status HTTP 404
+RESPOSTA:
+Error 404: Not Found
+invalid request
+--------------------------------------------------
+COMANDO: getservertime
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var time="20250731134705";
+var timeZone="Europe/Athens";
+var dstmode="off";
+--------------------------------------------------
+COMANDO: getnetattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var dhcpflag="on";
+var ip="192.168.0.147";
+var netmask="255.255.255.0";
+var gateway="192.168.0.127";
+var dnsstat="1";
+var fdnsip="192.168.0.127";
+var sdnsip="";
+var macaddress="00:E7:AD:A5:D5:39";
+var networktype="LAN";
+--------------------------------------------------
+COMANDO: getinfrared
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var infraredstat="auto";
+--------------------------------------------------
+COMANDO: getwifiattr
+STATUS: HTTP_ERRO
+MENSAGEM: Status HTTP 404
+RESPOSTA:
+Error 404: Not Found
+invalid request
+--------------------------------------------------
+COMANDO: scanwireless
+STATUS: HTTP_ERRO
+MENSAGEM: Status HTTP 404
+RESPOSTA:
+Error 404: Not Found
+invalid request
+--------------------------------------------------
+COMANDO: getlanguage
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var lancode="1";
+--------------------------------------------------
+COMANDO: getsnaptimerattrex
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var as_snap_enable="1";
+var as_snap_interval="60";
+var as_email_enable="0";
+var as_email_interval="30";
+var as_ftp_enable="0";
+var as_ftp_interval="60";
+var as_cloud_enable="0";
+var as_cloud_interval="60";
+--------------------------------------------------
+COMANDO: getsmdattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var smd_enable="1";
+var smd_threshold="256";
+var smd_x="0";
+var smd_y="0";
+var smd_w="1280";
+var smd_h="720";
+--------------------------------------------------
+COMANDO: getcapability
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var cap_cvbs="off";
+var cap_sd="on";
+var cap_usb="on";
+--------------------------------------------------
+COMANDO: getserverinfo
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var model="C6F0SoZ3N0PgL2";
+var hardVersion="V1.0.0.1";
+var softVersion="V24.1.11.16.3-20220113";
+var webVersion="V3.0.7.1";
+var rs485Version="V0.0";
+var name="ipCam";
+var startdate="2025-07-28 19:40:30";
+var upnpstatus="off";
+var facddnsstatus="off";
+var th3ddnsstatus="off";
+var platformstatus="0";
+var sdshow="1";
+var sdstatus="Ready";
+var sdfreespace="1853024";
+var sdtotalspace="7607360";
+--------------------------------------------------
+COMANDO: getftpattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var ft_server="";
+var ft_port="21";
+var ft_username="";
+var ft_password="";
+var ft_mode="1";
+var ft_dirname="./";
+var ft_autocreatedir="1";
+--------------------------------------------------
+COMANDO: getmdattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var m1_enable="1";
+var m1_x="0";
+var m1_y="85";
+var m1_w="2560";
+var m1_h="1834";
+var m1_sensitivity="50";
+var m1_threshold="0";
+var m2_enable="0";
+var m2_x="2240";
+var m2_y="0";
+var m2_w="320";
+var m2_h="426";
+var m2_sensitivity="50";
+var m2_threshold="0";
+var m3_enable="0";
+var m3_x="0";
+var m3_y="1493";
+var m3_w="320";
+var m3_h="426";
+var m3_sensitivity="50";
+var m3_threshold="0";
+var m4_enable="0";
+var m4_x="2240";
+var m4_y="1493";
+var m4_w="320";
+var m4_h="426";
+var m4_sensitivity="50";
+var m4_threshold="0";
+--------------------------------------------------
+COMANDO: getonvifattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var ov_enable="1";
+var ov_port="8080";
+var ov_authflag="0";
+var ov_forbitset="0";
+var ov_subchn="12";
+var ov_snapchn="12";
+var ov_nvctype="0";
+--------------------------------------------------
+COMANDO: searchwireless
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var waccess_points="8";
+var wchannel=new Array();
+var wrssi=new Array();
+var wessid=new Array();
+var wenc=new Array();
+var wauth=new Array();
+var wnet=new Array();
+wchannel[0]="2";
+wrssi[0]="100";
+wessid[0]="Orange-49fm";
+wnet[0]="Infra";
+wauth[0]="WPA2-PSK";
+wenc[0]="AES";
+wchannel[1]="2";
+wrssi[1]="100";
+wessid[1]="Galinheiro_0000";
+wnet[1]="Infra";
+wauth[1]="WPA2-PSK";
+wenc[1]="AES";
+wchannel[2]="2";
+wrssi[2]="50";
+wessid[2]="Orange-49fm";
+wnet[2]="Infra";
+wauth[2]="WPA2-PSK";
+wenc[2]="AES";
+wchannel[3]="13";
+wrssi[3]="30";
+wessid[3]="Proximus Public Wi-Fi";
+wnet[3]="Infra";
+wauth[3]="WPA2-PSK";
+wenc[3]="TKIP";
+wchannel[4]="13";
+wrssi[4]="30";
+wessid[4]="Proximus Public Wi-Fi";
+wnet[4]="Infra";
+wauth[4]="WPA2-PSK";
+wenc[4]="AES";
+wchannel[5]="13";
+wrssi[5]="26";
+wessid[5]="WiFi-2.4-563D";
+wnet[5]="Infra";
+wauth[5]="WPA2-PSK";
+wenc[5]="AES";
+wchannel[6]="13";
+wrssi[6]="26";
+wessid[6]="Proximus-Home-6258";
+wnet[6]="Infra";
+wauth[6]="WPA2-PSK";
+wenc[6]="AES";
+wchannel[7]="2";
+wrssi[7]="22";
+wessid[7]="rÃ©pÃ©teur wifi_EXT";
+wnet[7]="Infra";
+wauth[7]="WPA2-PSK";
+wenc[7]="AES";
+--------------------------------------------------
+COMANDO: getmobilesnapattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var msize="1";
+--------------------------------------------------
+COMANDO: getptzspeed
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var panspeed="0";
+var tiltspeed="0";
+--------------------------------------------------
+COMANDO: getaudioflag
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var audioflag="1";
+--------------------------------------------------
+COMANDO: getlightattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var light_enable="off";
+--------------------------------------------------
+COMANDO: getupnpattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var upm_enable="0";
+--------------------------------------------------
+COMANDO: getsmartrackattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var smartrack_flag="1";
+var smartrack_enable="1";
+var smartrack_timeout="60";
+--------------------------------------------------
+COMANDO: getourddnsattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var our_enable="0";
+var our_server="hipcam.org";
+var our_port="80";
+var our_uname="VOO-F1YUMM4";
+var our_passwd="HfFx2EJxfXbPX7ggRP";
+var our_domain="";
+var our_interval="180";
+--------------------------------------------------
+COMANDO: getsmdex
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var smd_type="0";
+var smd_default_gthresh="25";
+var smd_gthresh="15";
+var smd_rect="1";
+--------------------------------------------------
+COMANDO: getscheduleex
+STATUS: FALHA
+MENSAGEM: Comando inválido (resposta 200)
+RESPOSTA:
+[Error]Param error.
+--------------------------------------------------
+COMANDO: getplatformtype
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var pftype="7";
+--------------------------------------------------
+COMANDO: getimagemaxsize
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var imagesize="4M169";
+--------------------------------------------------
+COMANDO: getstreamnum
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var stream_num="0";
+--------------------------------------------------
+COMANDO: getalarmsnapattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var snap_chn="11";
+var snap_count="1";
+var snap_name_mode="0";
+var snap_alarm_name="";
+var snap_timer_name="";
+--------------------------------------------------
+COMANDO: getvideoattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var videomode="101";
+var vinorm="P";
+var profile="3";
+var maxchn="2";
+var wdrmode="0";
+--------------------------------------------------
+COMANDO: getwirelessattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var wf_enable="1";
+var wf_ssid="Ipcam";
+var wf_auth="0";
+var wf_key="";
+var wf_enc="0";
+var wf_mode="0";
+--------------------------------------------------
+COMANDO: getdevtype
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var devtype="C6F0SoZ3N0PgL2";
+--------------------------------------------------
+COMANDO: getsmtpattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var ma_server="";
+var ma_port="25";
+var ma_ssl="0";
+var ma_logintype="1";
+var ma_username="";
+var ma_password="";
+var ma_from="";
+var ma_to="";
+var ma_subject="";
+var ma_text="";
+--------------------------------------------------
+COMANDO: getntpattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var ntpenable="1";
+var ntpserver="ntp.main";
+var ntpinterval="1";
+--------------------------------------------------
+COMANDO: getptzcomattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var protocal="0";
+var address="1";
+var speed="31";
+var baud="9600";
+var databit="8";
+var stopbit="1";
+var check="0";
+--------------------------------------------------
+COMANDO: getplanrecattr
+STATUS: SUCESSO
+MENSAGEM: OK
+RESPOSTA:
+var planrec_enable="1";
+var planrec_chn="11";
+var planrec_time="600";
+var planrec_type="1";
+--------------------------------------------------
+COMANDO: getchkwireless
+STATUS: TIMEOUT
+MENSAGEM: Erro de conexão/requisição -> Tempo limite (10s)
+RESPOSTA: N/A
+--------------------------------------------------
+COMANDO: getinterip
+STATUS: TIMEOUT
+MENSAGEM: Erro de conexão/requisição -> Tempo limite (10s)
+RESPOSTA: N/A
+--------------------------------------------------

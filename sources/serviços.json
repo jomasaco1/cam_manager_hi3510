@@ -1,0 +1,59 @@
+{
+    "descricao": "Serviços externos e plataformas",
+    "subAbas": {
+        "email": {
+            "comandos": ["getsmtpattr"],
+            "parametros": {
+                "ma_server": "Servidor SMTP",
+                "ma_port": "Porta SMTP",
+                "ma_ssl": "SSL Ativado (0/1)",
+                "ma_logintype": "Tipo Autenticação",
+                "ma_username": "Utilizador SMTP",
+                "ma_password": "Senha SMTP",
+                "ma_from": "Remetente",
+                "ma_to": "Destinatário",
+                "ma_subject": "Assunto",
+                "ma_text": "Texto do Email"
+            }
+        },
+        "plataformas": {
+            "comandos": ["gettmallattr", "getamazonattr", "getcloudenable", "getdanaattr", "getobjattr", "gethip2pattr", "getoplatformattr"],
+            "parametros": {
+                "tmall_flag": "Suporte Tmall (0/1)",
+                "tmall_enable": "Tmall ativado (0/1)",
+                "amazon_flag": "Suporte Amazon (0/1)",
+                "amazon_enable": "Amazon ativado (0/1)",
+                "cloud_enable": "Nuvem ativada (0/1)",
+                "dana_enable": "Dana ativada (0/1)",
+                "dana_server": "Servidor Dana",
+                "dana_port": "Porta Dana",
+                "dana_sn": "Número de série Dana",
+                "obj_enable": "OBJ ativado (0/1)",
+                "obj_uid": "UID OBJ",
+                "hip2p_enable": "Hi-P2P ativado (0/1)",
+                "hip2p_mode": "Modo Hi-P2P",
+                "hip2p_prefix": "Prefixo Hi-P2P",
+                "hip2p_uid": "UID Hi-P2P",
+                "hip2p_pushaddr": "Endereço de push Hi-P2P",
+                "hip2p_svraddr": "Servidor Hi-P2P",
+                "op_state": "Estado da plataforma aberta (0/1)",
+                "op_enable": "Plataforma aberta ativada (0/1)",
+                "op_server": "Servidor da plataforma",
+                "op_port": "Porta da plataforma",
+                "op_uname": "Utilizador da plataforma",
+                "op_passwd": "Senha da plataforma",
+                "op_timeout": "Tempo limite de conexão (s)"
+            }
+        },
+        "dispositivos": {
+            "comandos": ["getdevices"],
+            "parametros": {
+                "d_host": "Array de endereços IP",
+                "d_alias": "Array de nomes",
+                "d_port": "Array de portas",
+                "d_username": "Array de utilizadores",
+                "d_password": "Array de senhas"
+            }
+        }
+    }
+}

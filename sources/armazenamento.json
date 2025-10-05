@@ -1,0 +1,74 @@
+{
+    "descricao": "Armazenamento, gravação e snapshots",
+    "subAbas": {
+        "nuvem": {
+            "comandos": ["getossattr"],
+            "parametros": {
+                "oss_exptime": "Data de expiração do armazenamento online",
+                "oss_totalsize": "Espaço total online (KB)",
+                "oss_usedsize": "Espaço usado online (KB)",
+                "oss_freesize": "Espaço livre online (KB)"
+            }
+        },
+        "gravacao": {
+            "comandos": ["getplanrecattr"],
+            "parametros": {
+                "planrec_enable": "Gravação agenda ativada (0/1)",
+                "planrec_chn": "Canal de gravação",
+                "planrec_time": "Duração máxima por gravação (s)",
+                "planrec_type": "Tipo de gravação (0=contínua, 1=evento)"
+            }
+        },
+        "snapshots": {
+            "comandos": ["getsnaptimerattr", "getsnaptimerattrex"],
+            "parametros": {
+                "as_enable": "Snapshot agendado ativado (0/1)",
+                "as_interval": "Intervalo entre snapshots (s)",
+                "as_type": "Ações (1=salvar local, 4=email, 5=ambos)",
+                "as_snap_enable": "Snapshots agendados ativados (0/1)",
+                "as_snap_interval": "Intervalo entre snapshots (s)",
+                "as_email_enable": "Envio por email ativado (0/1)",
+                "as_email_interval": "Intervalo de envio via email (s)",
+                "as_ftp_enable": "Envio por FTP ativado (0/1)",
+                "as_ftp_interval": "Intervalo de envio via FTP (s)",
+                "as_cloud_enable": "Envio para nuvem ativado (0/1)",
+                "as_cloud_interval": "Intervalo entre envios para nuvem (s)"
+            }
+        },
+        "ftp": {
+            "comandos": ["getftpattr"],
+            "parametros": {
+                "ft_server": "Servidor FTP",
+                "ft_port": "Porta FTP",
+                "ft_username": "Utilizador FTP",
+                "ft_password": "Senha FTP",
+                "ft_mode": "Modo FTP",
+                "ft_dirname": "Diretório FTP",
+                "ft_autocreatedir": "Criar diretório automaticamente (0/1)"
+            }
+        },
+		"Snapshots_Automaticos": {
+			"comandos": ["getsnaptimerattrex", "getscheduleex&-ename=snap", "getaudioflag"],
+			"parametros": {
+				"as_snap_enable": "Habilita a gravação local de snapshots (0 = desativado, 1 = ativado)",
+				"as_snap_interval": "Intervalo entre snapshots locais, em segundos (5-86400)",
+				"as_email_enable": "Habilita envio de snapshots via email (0 = desativado, 1 = ativado)",
+				"as_email_interval": "Intervalo entre envios de email, em segundos (5-86400)",
+				"as_ftp_enable": "Habilita envio de snapshots via FTP (0 = desativado, 1 = ativado)",
+				"as_ftp_interval": "Intervalo entre envios FTP, em segundos (5-86400)",
+				"as_cloud_enable": "Habilita envio de snapshots para nuvem (0 = desativado, 1 = ativado)",
+				"as_cloud_interval": "Intervalo entre envios para nuvem, em segundos (5-86400)",
+				"etm": "Enable Time Mode (0 = desativado, 1 = ativado)",
+				"week0": "Domingo, 48 slots de 30 minutos cada ('P' = ativo, 'N' = inativo)",
+				"week1": "Segunda-feira, 48 slots de 30 minutos cada",
+				"week2": "Terça-feira, 48 slots de 30 minutos cada",
+				"week3": "Quarta-feira, 48 slots de 30 minutos cada",
+				"week4": "Quinta-feira, 48 slots de 30 minutos cada",
+				"week5": "Sexta-feira, 48 slots de 30 minutos cada",
+				"week6": "Sábado, 48 slots de 30 minutos cada",
+				"audioflag": "Indica se o áudio está habilitado (0 = desativado, 1 = ativado)"
+			}
+		}
+
+    }
+}

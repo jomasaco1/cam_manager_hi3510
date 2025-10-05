@@ -1,0 +1,12 @@
+{
+    "descricao": "Testes de conectividade e serviços",
+    "subAbas": {
+        "testes_rede": {
+            "comandos": ["chkwirelessattr", "getchkwireless", "searchwireless", "testsmtp", "testftp"],
+            "parametros": {
+                "chkres": "Resultado do teste de wireless (0/1)",
+                "result": "Resultado do teste SMTP/FTP"
+            }
+        }
+    }
+}

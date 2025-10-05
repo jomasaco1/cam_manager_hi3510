@@ -1,0 +1,11 @@
+{
+    "descricao": "Outras configurações e comandos",
+    "subAbas": {
+        "comandos": {
+            "comandos": ["requestifrm", "relayctrl"],
+            "parametros": {
+				"_comentario": "// Estes comandos falharam no teste, mas podem ser suportados em alguns modelos"
+            }
+        }
+    }
+}

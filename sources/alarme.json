@@ -1,0 +1,104 @@
+{
+    "descricao": "Alarmes, detecção e ações",
+    "subAbas": {
+        "entradas_saidas": {
+            "comandos": ["getioattr", "getpirattr", "getrelayattr"],
+            "parametros": {
+                "io_enable": "IO ativado (0/1)",
+                "io_flag": "Estado das GPIO (0=NC, 1=NO)",
+                "pir_enable": "PIR ativado (0/1)",
+                "pir_flag": "Estado do PIR (0/1)",
+                "time": "Tempo do relé"
+            }
+        },
+        "detecao_movimento": {
+            "comandos": ["getmdattr", "getsmdattr", "getsmdex"],
+            "parametros": {
+                "m1_enable": "Área 1 Motion Detect ativada (0/1)",
+                "m1_x": "X área 1",
+                "m1_y": "Y área 1",
+                "m1_w": "Largura área 1",
+                "m1_h": "Altura área 1",
+                "m1_sensitivity": "Sensibilidade área 1",
+                "m1_threshold": "Limiar área 1",
+                "m2_enable": "Área 2 MD ativada (0/1)",
+                "m2_x": "X área 2",
+                "m2_y": "Y área 2",
+                "m2_w": "Largura área 2",
+                "m2_h": "Altura área 2",
+                "m2_sensitivity": "Sensibilidade área 2",
+                "m2_threshold": "Limiar área 2",
+                "m3_enable": "Área 3 MD ativada (0/1)",
+                "m3_x": "X área 3",
+                "m3_y": "Y área 3",
+                "m3_w": "Largura área 3",
+                "m3_h": "Altura área 3",
+                "m3_sensitivity": "Sensibilidade área 3",
+                "m3_threshold": "Limiar área 3",
+                "m4_enable": "Área 4 MD ativada (0/1)",
+                "m4_x": "X área 4",
+                "m4_y": "Y área 4",
+                "m4_w": "Largura área 4",
+                "m4_h": "Altura área 4",
+                "m4_sensitivity": "Sensibilidade área 4",
+                "m4_threshold": "Limiar área 4",
+                "smd_enable": "Smart Motion Detect ativado (0/1)",
+                "smd_threshold": "Limiar SMD",
+                "smd_x": "X SMD",
+                "smd_y": "Y SMD",
+                "smd_w": "Largura SMD",
+                "smd_h": "Altura SMD",
+                "smd_type": "Tipo Smart Motion Detect (0=padrão, 1=avançado)",
+                "smd_default_gthresh": "Limiar padrão SMD",
+                "smd_gthresh": "Limiar configurado SMD",
+                "smd_rect": "Exibir retângulos SMD (0/1)"
+            }
+        },
+		"acoes_alarme": {
+    "comandos": ["getmdalarm&-aname=email", "getmdalarm&-aname=emailsnap", "getmdalarm&-aname=ftpsnap", "getmdalarm&-aname=snap", "getmdalarm&-aname=emailrec", "getmdalarm&-aname=record", "getmdalarm&-aname=ftprec", "getmdalarm&-aname=relay"],
+    "parametros": {
+                "md_email_switch": "Estado da ação 'email' (on = habilitado, off = desabilitado)",
+                "md_emailsnap_switch": "Estado da ação 'emailsnap' (on = habilitado, off = desabilitado)",
+                "md_ftpsnap_switch": "Estado da ação 'ftpsnap' (on = habilitado, off = desabilitado)",
+                "md_snap_switch": "Estado da ação 'snap' (on = habilitado, off = desabilitado)",
+                "md_emailrec_switch": "Estado da ação 'emailrec' (on = habilitado, off = desabilitado)",
+                "md_record_switch": "Estado da ação 'record' (on = habilitado, off = desabilitado)",
+                "md_ftprec_switch": "Estado da ação 'ftprec' (on = habilitado, off = desabilitado)",
+                "md_relay_switch": "Estado da ação 'relay' (on = habilitado, off = desabilitado)"
+            }
+        },
+		"Gravação_alarmes": {
+            "comandos": ["getscheduleex&-ename=md"],
+            "parametros": {
+                "etm": "Enable Time Mode",
+                "week0": "Domingo, 48 slots de 30 minutos cada ('P' = ativo, 'N' = inativo)",
+                "week1": "Segunda-feira, 48 slots de 30 minutos cada",
+                "week2": "Terça-feira, 48 slots de 30 minutos cada",
+                "week3": "Quarta-feira, 48 slots de 30 minutos cada",
+                "week4": "Quinta-feira, 48 slots de 30 minutos cada",
+                "week5": "Sexta-feira, 48 slots de 30 minutos cada",
+                "week6": "Sábado, 48 slots de 30 minutos cada"
+            }
+        },
+        "snapshots_alarme": {
+            "comandos": ["getalarmsnapattr"],
+            "parametros": {
+                "snap_chn": "Canal para snapshots de alarme",
+                "snap_count": "Número de snapshots por alarme",
+                "snap_name_mode": "Modo de nomeação de snapshots",
+                "snap_alarm_name": "Nome personalizado para snapshots de alarme",
+                "snap_timer_name": "Nome personalizado para snapshots agendados"
+            }
+        },
+        "servidor_alarme": {
+            "comandos": ["getalarmserverattr"],
+            "parametros": {
+                "as_server": "Servidor de alarmes",
+                "as_port": "Porta do servidor de alarmes",
+                "as_username": "Utilizador do servidor de alarmes",
+                "as_password": "Senha do servidor de alarmes",
+                "as_info": "Informação adicional"
+            }
+        }
+    }
+}

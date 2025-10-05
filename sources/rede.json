@@ -1,0 +1,175 @@
+{
+    "descricao": "Rede, portas, serviços de conectividade e protocolos",
+    "subAbas": {
+        "tcp_ip": {
+            "comandos": ["getnetattr", "getinterip"],
+            "parametros": {
+                "networktype": "Tipo de Conexão (LAN/WLAN)",
+                "macaddress": "Endereço MAC",
+                "dhcpflag": "DHCP Ativado (on/off)",
+                "ip": "Endereço IP",
+                "netmask": "Máscara de Rede",
+                "gateway": "Gateway",
+                "dnsstat": "DNS (1=Auto, 0=Manual)",
+                "fdnsip": "DNS Primário",
+                "sdnsip": "DNS Secundário",
+                "interip": "IP Público"
+            }
+        },
+        "wireless": {
+            "comandos": ["getwifiattrex", "searchwireless"],
+            "parametros": {
+                "wf_enable": "Wi-Fi Ativado (0/1)",
+                "wf_ssid": "SSID da Rede",
+                "wf_auth": "Tipo de Autenticação",
+                "wf_key": "Chave Wi-Fi",
+                "wf_enc": "Tipo de Criptografia",
+                "wf_mode": "Modo de Operação",
+                "wf_speed": "Velocidade Máxima (Mbps)",
+                "wf_chn": "Canal Wi-Fi",
+                "wf_power": "Potência de Transmissão (dBm)",
+                "waccess_points": "Número de Redes Detectadas",
+                "wchannel": "Canal de Cada Rede",
+                "wrssi": "Intensidade do Sinal",
+                "wessid": "SSID das Redes",
+                "wenc": "Criptografia das Redes",
+                "wauth": "Autenticação das Redes",
+                "wnet": "Modo das Redes",
+                "chkres": "Resultado do Teste de Conexão (0/1)"
+            }
+        },
+        "portas": {
+            "comandos": ["gethttpport", "gethttpsport", "getrtspport", "getrtspauth", "getrtmpattr"],
+            "parametros": {
+                "httpport": "Porta HTTP",
+                "httpsport": "Porta HTTPS",
+                "rtmpport": "Porta RTMP",
+                "rtspport": "Porta RTSP",
+                "rtpport": "Porta RTP",
+                "rtsp_aenable": "Autenticação RTSP Ativada (0/1)"
+            }
+        },
+        "ddns": {
+            "comandos": ["get3thddnsattr", "getourddnsattr"],
+            "parametros": {
+                "d3th_enable": "DDNS de Terceiros Ativado (0/1)",
+                "d3th_service": "Provedor DDNS",
+                "d3th_uname": "Utilizador DDNS",
+                "d3th_passwd": "Senha DDNS",
+                "d3th_domain": "Domínio DDNS",
+                "our_enable": "DDNS Próprio Ativado (0/1)",
+                "our_server": "Servidor DDNS",
+                "our_port": "Porta do Servidor",
+                "our_uname": "Utilizador DDNS Próprio",
+                "our_passwd": "Senha DDNS Próprio",
+                "our_domain": "Domínio DDNS Próprio",
+                "our_interval": "Intervalo de Atualização (segundos)"
+            }
+        },
+        "upnp": {
+            "comandos": ["getupnpattr"],
+            "parametros": {
+                "upm_enable": "UPnP Ativado (0/1)"
+            }
+        },
+        "ntp": {
+            "comandos": ["getntpattr"],
+            "parametros": {
+                "ntpenable": "NTP Ativado (0/1)",
+                "ntpserver": "Servidor NTP",
+                "ntpinterval": "Intervalo de Sincronização (horas)"
+            }
+        },
+        "servicos_cloud": {
+            "comandos": ["getcloudattr", "getxqp2pattr", "getp2pattr", "getgoolinkattr"],
+            "parametros": {
+                "cloud_flag": "Serviço de Nuvem Disponível (0/1)",
+                "cloud_enable": "Serviço de Nuvem Ativado (0/1)",
+                "xqp2p_enable": "XQ-P2P Ativado (0/1)",
+                "xqp2p_mode": "Modo XQ-P2P",
+                "xqp2p_prefix": "Prefixo XQ-P2P",
+                "xqp2p_uid": "UID XQ-P2P",
+                "xqp2p_pushaddr": "Endereço de Push XQ-P2P",
+                "xqp2p_svraddr": "Servidor XQ-P2P",
+                "p2p_enable": "P2P Ativado (0/1)",
+                "p2p_fullfunc": "Funcionalidade Completa P2P (0/1)",
+                "p2p_uid": "UID P2P",
+                "p2p_server1": "Servidor P2P 1",
+                "p2p_server2": "Servidor P2P 2",
+                "p2p_server3": "Servidor P2P 3",
+                "p2p_server4": "Servidor P2P 4",
+                "goolink_enable": "Goolink Ativado (0/1)",
+                "goolink_uid": "UID Goolink"
+            }
+        },
+        "protocolos": {
+            "comandos": ["getonvifattr", "getgb28181attr"],
+            "parametros": {
+                "ov_enable": "ONVIF Ativado (0/1)",
+                "ov_port": "Porta ONVIF",
+                "ov_authflag": "Autenticação ONVIF (0/1)",
+                "ov_forbitset": "Bloqueio de Configurações",
+                "ov_subchn": "Canal Streaming Secundário",
+                "ov_snapchn": "Canal Snapshots",
+                "ov_nvctype": "Modo de Compatibilidade",
+                "gb_enable": "GB28181 Ativado (0/1)",
+                "gb_svrid": "ID Servidor SIP",
+                "gb_svrip": "IP Servidor SIP",
+                "gb_svrport": "Porta Servidor SIP",
+                "gb_devid": "ID Dispositivo",
+                "gb_devport": "Porta SIP Dispositivo",
+                "gb_devpwd": "Senha Dispositivo",
+                "gb_heartcycle": "Intervalo Batimentos (segundos)",
+                "gb_heartcount": "Máximo Falhas Batimento",
+                "gb_regtime": "Tempo Validade Registo (segundos)",
+                "gb_macaddr": "Endereço MAC"
+            }
+        },
+        "servidores_remotos": {
+            "comandos": ["getsmtpattr", "getftpattr", "getalarmserverattr"],
+            "parametros": {
+                "ma_server": "Servidor SMTP",
+                "ma_port": "Porta SMTP",
+                "ma_ssl": "SSL Ativado (0/1)",
+                "ma_logintype": "Tipo Autenticação",
+                "ma_username": "Utilizador SMTP",
+                "ma_password": "Senha SMTP",
+                "ma_from": "Remetente",
+                "ma_to": "Destinatário",
+                "ma_subject": "Assunto",
+                "ma_text": "Texto do Email",
+                "ft_server": "Servidor FTP",
+                "ft_port": "Porta FTP",
+                "ft_username": "Utilizador FTP",
+                "ft_password": "Senha FTP",
+                "ft_mode": "Modo Conexão FTP",
+                "ft_dirname": "Diretório Remoto",
+                "ft_autocreatedir": "Criar Diretório Automaticamente (0/1)",
+                "as_server": "Servidor de Alarmes",
+                "as_port": "Porta Servidor de Alarmes",
+                "as_username": "Utilizador Servidor de Alarmes",
+                "as_password": "Senha Servidor de Alarmes",
+                "as_info": "Informação Adicional"
+            }
+        },
+        "4g": {
+            "comandos": ["get4gattr"],
+            "parametros": {
+                "g4_runmode": "Modo APN (0=Auto, 1=Manual)",
+                "g4_simcard": "Estado do Cartão SIM (0=Não, 1=Sim)",
+                "g4_status": "Status de Conexão 4G",
+                "g4_quality": "Qualidade do Sinal (0-5)",
+                "g4_ver": "Versão do Firmware 4G",
+                "g4_mcc": "Código do País (MCC)",
+                "g4_mnc": "Código da Rede (MNC)",
+                "g4_carrier": "Operadora",
+                "g4_imei": "IMEI",
+                "g4_iccid": "ICCID",
+                "g4_apn": "APN",
+                "g4_username": "Utilizador APN",
+                "g4_password": "Senha APN",
+                "g4_authtype": "Tipo de Autenticação APN"
+            }
+        }
+    }
+}

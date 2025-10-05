@@ -1,0 +1,132 @@
+{
+    "descricao": "Imagem, qualidade visual, modos de visualização e correções",
+    "subAbas": {
+        "ajustes_basicos": {
+            "comandos": ["getimageattr"],
+            "parametros": {
+                "display_mode": "Modo de Exibição (1=padrão)",
+                "brightness": "Brilho (0-100)",
+                "contrast": "Contraste (0-100)",
+                "saturation": "Saturação",
+                "sharpness": "Nitidez (0-100)",
+                "hue": "Matiz (0-100)",
+                "flip": "Inverter Verticalmente (on/off)",
+                "mirror": "Espelhar Horizontalmente (on/off)",
+                "wdr": "Wide Dynamic Range (on/off)",
+                "wdrvalue": "Nível do WDR (1-30)",
+                "night": "Modo Noturno Forçado (on/off)",
+                "noise": "Redução de Ruído (0=desativado)",
+                "gamma": "Correção de Gama (0=off, 1=on)",
+                "shutter": "Velocidade do Obturador (µs)",
+                "flash_shutter": "Obturador para Flash",
+                "ae": "Modo de Exposição Automática",
+                "targety": "Brilho Alvo da Exposição",
+                "aemode": "Modo de Exposição Automática",
+                "imgmode": "Modo de Imagem",
+                "gc": "Ganho de Cor"
+            }
+        },
+        "modo_noturno": {
+            "comandos": ["getircutattr", "getinfrared"],
+            "parametros": {
+                "saradc_switch_value": "Limiar para ativar IR-Cut",
+                "saradc_b2c_switch_value": "Limiar para desativar IR-Cut",
+                "infraredstat": "Estado do IR (close=desligado, open=ligado)"
+            }
+        },
+        "iluminacao": {
+            "comandos": ["getlightattr", "getlampattrex", "getlampctrl"],
+            "parametros": {
+                "light_enable": "LEDs Infravermelhos (on/off)",
+                "lamp_mode_flag": "Modo da Lâmpada (0=manual, 1=auto, 2=timer)",
+                "lamp_mode": "Estado da Lâmpada (0=off, 1=on)",
+                "lamp_timeout": "Timeout da Lâmpada (segundos)",
+                "lamp_chktime": "Intervalo de verificação de luz (segundos)",
+                "lampstat": "Estado da iluminação (auto/on/off)"
+            }
+        },
+        "correcoes_lente": {
+            "comandos": ["getldcattr", "getfisheyeattr"],
+            "parametros": {
+                "ldc_enable": "Correção de distorção ativada (0/1)",
+                "ldc_xoffset": "Deslocamento horizontal",
+                "ldc_yoffset": "Deslocamento vertical",
+                "ldc_ratio": "Intensidade da correção (0-511)",
+                "fisheye_flag": "Correção fisheye ativada (0/1)",
+                "fisheye_mode": "Modo de correção fisheye",
+                "fisheye_lens": "Tipo de lente fisheye",
+                "fisheye_xcircle": "Coordenada X do centro",
+                "fisheye_ycircle": "Coordenada Y do centro",
+                "fisheye_rcircle": "Raio da imagem circular"
+            }
+        },
+        "mascaras": {
+            "comandos": ["getcover"],
+            "parametros": {
+                "show_1": "Área de cobertura 1 ativa (0/1)",
+                "color_1": "Cor da máscara 1 (RRGGBB)",
+                "x_1": "Posição X área 1",
+                "y_1": "Posição Y área 1",
+                "w_1": "Largura área 1",
+                "h_1": "Altura área 1",
+                "show_2": "Área de cobertura 2 ativa (0/1)",
+                "color_2": "Cor da máscara 2 (RRGGBB)",
+                "x_2": "Posição X área 2",
+                "y_2": "Posição Y área 2",
+                "w_2": "Largura área 2",
+                "h_2": "Altura área 2",
+                "show_3": "Área de cobertura 3 ativa (0/1)",
+                "color_3": "Cor da máscara 3 (RRGGBB)",
+                "x_3": "Posição X área 3",
+                "y_3": "Posição Y área 3",
+                "w_3": "Largura área 3",
+                "h_3": "Altura área 3",
+                "show_4": "Área de cobertura 4 ativa (0/1)",
+                "color_4": "Cor da máscara 4 (RRGGBB)",
+                "x_4": "Posición X área 4",
+                "y_4": "Posición Y área 4",
+                "w_4": "Largura área 4",
+                "h_4": "Altura área 4"
+            }
+        },
+		"osd": {
+            "comandos": ["getoverlayattr&-region=0", "getoverlayattr&-region=1", "getoverlayattr&-region=2", "getoverlayattr&-region=3"],
+            "parametros": {
+                "show_0": "Visibilidade do OSD região 0 (0=oculto, 1=visível)",
+                "place_0": "Posição do OSD região 0 (0=Topo Esquerdo, 1=Topo Direito, 2=Inferior Esquerdo, 3=Inferior Direito)",
+				"format_0": "Formato de data/hora região 0 (0=YYYY-MM-DD hh:mm:ss, 1=MM/DD/YYYY hh:mm:ss, 2=DD/MM/YYYY hh:mm:ss)",
+				"type_0": "Tipo de conteúdo região 0 (0=data/hora, 1=texto personalizado)",
+				"x_0": "Coordenada X personalizada região 0 (0 a largura máxima)",
+				"y_0": "Coordenada Y personalizada região 0 (0 a altura máxima)",
+				"name_0": "Texto personalizado região 0 (se type_0=1) ou formato de data",
+				"show_1": "Visibilidade do OSD região 1 (0=oculto, 1=visível)",
+                "place_1": "Posição do OSD região 1 (0=Topo Esquerdo, 1=Topo Direito, 2=Inferior Esquerdo, 3=Inferior Direito)",
+				"format_1": "Formato de data/hora região 1 (0=YYYY-MM-DD hh:mm:ss, 1=MM/DD/YYYY hh:mm:ss, 2=DD/MM/YYYY hh:mm:ss)",
+				"type_1": "Tipo de conteúdo região 1 (0=data/hora, 1=texto personalizado)",
+				"x_1": "Coordenada X personalizada região 1 (0 a largura máxima)",
+				"y_1": "Coordenada Y personalizada região 1 (0 a altura máxima)",
+				"name_1": "Texto personalizado região 1 (se type_0=1) ou formato de data",
+				"show_2": "Visibilidade do OSD região 2 (0=oculto, 1=visível)",
+                "place_2": "Posição do OSD região 2 (0=Topo Esquerdo, 1=Topo Direito, 2=Inferior Esquerdo, 3=Inferior Direito)",
+				"format_2": "Formato de data/hora região 2 (0=YYYY-MM-DD hh:mm:ss, 1=MM/DD/YYYY hh:mm:ss, 2=DD/MM/YYYY hh:mm:ss)",
+				"type_2": "Tipo de conteúdo região 2 (0=data/hora, 1=texto personalizado)",
+				"x_2": "Coordenada X personalizada região 2 (0 a largura máxima)",
+				"y_2": "Coordenada Y personalizada região 2 (0 a altura máxima)",
+				"name_2": "Texto personalizado região 2 (se type_0=1) ou formato de data",
+				"show_3": "Visibilidade do OSD região 3 (0=oculto, 1=visível)",
+                "place_3": "Posição do OSD região 3 (0=Topo Esquerdo, 1=Topo Direito, 2=Inferior Esquerdo, 3=Inferior Direito)",
+				"format_3": "Formato de data/hora região 3 (0=YYYY-MM-DD hh:mm:ss, 1=MM/DD/YYYY hh:mm:ss, 2=DD/MM/YYYY hh:mm:ss)",
+				"type_3": "Tipo de conteúdo região 3 (0=data/hora, 1=texto personalizado)",
+				"x_3": "Coordenada X personalizada região 3 (0 a largura máxima)",
+				"y_3": "Coordenada Y personalizada região 3 (0 a altura máxima)",
+				"name_3": "Texto personalizado região 3 (se type_0=1) ou formato de data"
+            }
+        },
+        "resolucao": {
+            "comandos": ["getimagemaxsize"],
+            "parametros": {
+                "imagesize": "Resolução máxima do sensor (ex: '4M169' = 4MP 16:9)"
+            }
+        }
+    }
+}

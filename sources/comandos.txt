@@ -48,12 +48,11 @@ getalarmsoundattr # Consulta as configurações específicas para o tipo e dura�
 getaudioflag # Exibe um flag ou status indicando a presença ou habilitação da funcionalidade de áudio na câmera.
 getftpattr # Obtém os atributos da configuração FTP (File Transfer Protocol), como servidor, porta, credenciais, diretório de destino e modo de transferência.
 getinfrared # Obtém o status do LED infravermelho da câmera. Retorna 'auto' (automático), 'open' (ligado) ou 'close' (desligado).
-getmdalarm&-aname=email&cmd=getmdalarm&-aname=emailsnap&cmd=getmdalarm&-aname=ftpsnap&cmd=getmdalarm&-aname=snap&cmd=getmdalarm&-aname=emailrec&cmd=getmdalarm&-aname=record&cmd=getmdalarm&-aname=ftprec&cmd=getmdalarm&-aname=relay # Comando relacionado ao alarme de detecção de movimento. É frequentemente um comando de configuração que requer parâmetros adicionais para ser válido.
+getmdalarm # Comando relacionado ao alarme de detecção de movimento. É frequentemente um comando de configuração que requer parâmetros adicionais para ser válido.
 getoverlayattr # Recupera os atributos de sobreposição de informação na imagem de vídeo, como texto personalizado, data e hora. Frequentemente requer parâmetros.
 getscheduleex&-ename=md # Atributos estendidos de agendamento de tarefas. É um comando que geralmente precisa de parâmetros para especificar qual agendamento consultar ou modificar.
 getsmdattr # Obtém os atributos da detecção de movimento inteligente (SMD), incluindo configurações de áreas e limites para a detecção.
 getstreamnum # Indica o número de streams de vídeo que a câmera é capaz de gerar (ex: main stream, sub stream).
-getwifiattr # Atributos específicos do módulo Wi-Fi. Em algumas câmeras, este comando pode não ser implementado ou resultar em erro 404, mesmo que 'getwirelessattr' funcione.
 getaudioinvolume # Obtém configurações de entrada de áudio.
 getaudiooutvolume # Obtém volume de saída de áudio.
 chkwirelessattr # Inicia teste de conexão Wi-Fi. Parâmetros: wf_ssid, wf_auth, wf_key, wf_enc, wf_mode. Retorno imediato: '[Succeed]set ok.' indica início do teste.
